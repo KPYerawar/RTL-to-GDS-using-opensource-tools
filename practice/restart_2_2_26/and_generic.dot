@@ -1,0 +1,12 @@
+digraph "or1" {
+label="or1";
+rankdir="LR";
+remincross=true;
+n1 [ shape=octagon, label="in1", color="black", fontcolor="black" ];
+n2 [ shape=octagon, label="in2", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="out1", color="black", fontcolor="black" ];
+c7 [ shape=record, label="{{<p4> A|<p5> B}|$48\n$_OR_|{<p6> Y}}" ];
+n1:e -> c7:p5:w [color="black", label=""];
+n2:e -> c7:p4:w [color="black", label=""];
+c7:p6:e -> n3:w [color="black", label=""];
+}

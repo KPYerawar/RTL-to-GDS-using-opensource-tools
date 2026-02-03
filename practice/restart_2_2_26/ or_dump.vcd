@@ -1,0 +1,40 @@
+$date
+	Tue Feb  3 21:44:59 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ortb $end
+$var wire 1 ! out1 $end
+$var reg 1 " in1 $end
+$var reg 1 # in2 $end
+$scope module o1 $end
+$var wire 1 " in1 $end
+$var wire 1 # in2 $end
+$var wire 1 ! out1 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1#
+0"
+1!
+$end
+#20
+1"
+#60
+0#
+#80
+1#
+#100
+0"
+#120
+0#
+1"
+#180
+1#
+#200
