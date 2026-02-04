@@ -1,4 +1,3 @@
-
 module and1tb;
 reg  in1 ;
 reg in2 ;
