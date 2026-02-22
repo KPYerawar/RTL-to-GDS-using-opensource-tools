@@ -1,0 +1,48 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x629b9539b670 .scope module, "all_gate" "all_gate" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "and1";
+    .port_info 3 /OUTPUT 1 "or1";
+    .port_info 4 /OUTPUT 1 "xor1";
+    .port_info 5 /OUTPUT 1 "nand1";
+    .port_info 6 /OUTPUT 1 "nor1";
+    .port_info 7 /OUTPUT 1 "xnor1";
+o0x789322ca90a8 .functor BUFZ 1, C4<z>; HiZ drive
+o0x789322ca9108 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x629b953bea60 .functor AND 1, o0x789322ca90a8, o0x789322ca9108, C4<1>, C4<1>;
+L_0x629b953beaf0 .functor OR 1, o0x789322ca90a8, o0x789322ca9108, C4<0>, C4<0>;
+L_0x629b953bebb0 .functor XOR 1, o0x789322ca90a8, o0x789322ca9108, C4<0>, C4<0>;
+L_0x629b953bec20 .functor AND 1, o0x789322ca90a8, o0x789322ca9108, C4<1>, C4<1>;
+L_0x629b953bed50 .functor NOT 1, L_0x629b953bec20, C4<0>, C4<0>, C4<0>;
+L_0x629b953bedf0 .functor OR 1, o0x789322ca90a8, o0x789322ca9108, C4<0>, C4<0>;
+L_0x629b953beea0 .functor NOT 1, L_0x629b953bedf0, C4<0>, C4<0>, C4<0>;
+L_0x629b953bef10 .functor XOR 1, o0x789322ca90a8, o0x789322ca9108, C4<0>, C4<0>;
+L_0x629b953befd0 .functor NOT 1, L_0x629b953bef10, C4<0>, C4<0>, C4<0>;
+v0x629b9539b8d0_0 .net *"_ivl_10", 0 0, L_0x629b953bedf0;  1 drivers
+v0x629b953be0b0_0 .net *"_ivl_14", 0 0, L_0x629b953bef10;  1 drivers
+v0x629b953be190_0 .net *"_ivl_6", 0 0, L_0x629b953bec20;  1 drivers
+v0x629b953be250_0 .net "a", 0 0, o0x789322ca90a8;  0 drivers
+v0x629b953be310_0 .net "and1", 0 0, L_0x629b953bea60;  1 drivers
+v0x629b953be420_0 .net "b", 0 0, o0x789322ca9108;  0 drivers
+v0x629b953be4e0_0 .net "nand1", 0 0, L_0x629b953bed50;  1 drivers
+v0x629b953be5a0_0 .net "nor1", 0 0, L_0x629b953beea0;  1 drivers
+v0x629b953be660_0 .net "or1", 0 0, L_0x629b953beaf0;  1 drivers
+o0x789322ca91c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x629b953be720_0 .net "xnor1", 0 0, o0x789322ca91c8;  0 drivers
+v0x629b953be7e0_0 .net "xnr1", 0 0, L_0x629b953befd0;  1 drivers
+v0x629b953be8a0_0 .net "xor1", 0 0, L_0x629b953bebb0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "all_gate.v";
