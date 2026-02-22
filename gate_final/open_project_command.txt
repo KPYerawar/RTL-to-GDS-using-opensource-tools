@@ -1,0 +1,2 @@
+# Open OpenROAD and run:
+read_db all_gate_final.db
