@@ -1,0 +1,30 @@
+digraph "top" {
+label="top";
+rankdir="LR";
+remincross=true;
+n1 [ shape=diamond, label="addr", color="black", fontcolor="black" ];
+n2 [ shape=octagon, label="clk", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="cycle", color="black", fontcolor="black" ];
+n4 [ shape=diamond, label="mem_rdata", color="black", fontcolor="black" ];
+n5 [ shape=diamond, label="mem_wdata", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="rst", color="black", fontcolor="black" ];
+n7 [ shape=diamond, label="rstrb", color="black", fontcolor="black" ];
+n8 [ shape=diamond, label="wr_strobe", color="black", fontcolor="black" ];
+c12 [ shape=record, label="{{<p2> clk|<p4> mem_rdata|<p6> rst}|cpu0\ncpu|{<p3> cycle|<p9> mem_addr|<p10> mem_rstrb|<p5> mem_wdata|<p11> mem_wstrb}}" ];
+c16 [ shape=record, label="{{<p1> addr|<p2> clk|<p13> data_in|<p14> rd_strobe|<p6> rst|<p8> wr_strobe}|mem0\nprogmem|{<p15> data_out}}" ];
+c12:p9:e -> n1:w [color="black", style="setlinewidth(3)", label=""];
+n1:e -> c16:p1:w [color="black", style="setlinewidth(3)", label=""];
+n2:e -> c12:p2:w [color="black", label=""];
+n2:e -> c16:p2:w [color="black", label=""];
+c12:p3:e -> n3:w [color="black", style="setlinewidth(3)", label=""];
+c16:p15:e -> n4:w [color="black", style="setlinewidth(3)", label=""];
+n4:e -> c12:p4:w [color="black", style="setlinewidth(3)", label=""];
+c12:p5:e -> n5:w [color="black", style="setlinewidth(3)", label=""];
+n5:e -> c16:p13:w [color="black", style="setlinewidth(3)", label=""];
+n6:e -> c12:p6:w [color="black", label=""];
+n6:e -> c16:p6:w [color="black", label=""];
+c12:p10:e -> n7:w [color="black", label=""];
+n7:e -> c16:p14:w [color="black", label=""];
+c12:p11:e -> n8:w [color="black", style="setlinewidth(3)", label=""];
+n8:e -> c16:p8:w [color="black", style="setlinewidth(3)", label=""];
+}

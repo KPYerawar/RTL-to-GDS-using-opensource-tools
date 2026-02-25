@@ -1,0 +1,18 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Feb 25 03:52:55 2026
+[*]
+[dumpfile] "/home/vlsi_devbox/RTL-to-GDS-using-opensource-tools/gate_final/cpu_tb.vcd"
+[dumpfile_mtime] "Wed Feb 25 03:51:26 2026"
+[dumpfile_size] 22906
+[savefile] "/home/vlsi_devbox/RTL-to-GDS-using-opensource-tools/processor_riscv/waveforms_final.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 144
+[pattern_trace] 1
+[pattern_trace] 0
